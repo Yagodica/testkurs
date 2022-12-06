@@ -1,0 +1,12 @@
+version: "3.0"
+services:
+
+  flaskapp:
+    container_name: "my-flask-app"
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    command: ./docker-entrypoint-flask.sh
